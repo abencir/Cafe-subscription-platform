@@ -1,0 +1,95 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background:  #EEDAB5;
+    overflow-x: hidden;
+    overflow-y: visible;
+
+}
+header{
+    nav{
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        .menu{
+            align-self: center;
+            width: 30%;
+            height: 40%;
+        }
+        .logo{
+            display: flex;
+            justify-self: center;
+            padding-top: 30px;
+            align-self: center;
+            width: 60%;
+            
+        }
+    }
+}
+
+main{
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .card{
+        border: solid 2px black;
+        width: 87.5%;
+        height: 331px;
+        background-color: #362323eb ;
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+        margin-bottom: 30px;
+        .content{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .head{
+                padding-top: 35px;
+                width: 80%;
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .desc{
+                position: relative;
+                top: 24px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.747);
+                font-family: "Albert Sans", sans-serif;
+                font-weight: 100;
+                font-size: 15px;
+                font-style: italic;
+            }
+            .price{
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+                width: 60%;
+                border-top: solid 2px white;
+                p{
+                    font-family: "Albert Sans", sans-serif;
+                    font-size: 22px;
+                    color: rgba(255, 255, 255, 0.855);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .bgfooter {
+        position: fixed;
+        z-index: 99;
+        bottom: 0;
+        width: 400px;
+        height: 19vh;
+        background-color: #306844;
+        clip-path: path('M 0 100 Q 500 160, 500 0 L 600 600 L 0 200 Z');
+    }
+}

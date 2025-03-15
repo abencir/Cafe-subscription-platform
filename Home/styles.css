@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #362323;
+    overflow-x: hidden;
     .bgcontent{
         width: 100%;
         height: 85vh;
@@ -10,26 +11,22 @@ body{
         border-radius: 0 0 74px 74px;
     }
 }
-
-
+    .hide{
+        display: none;
+    }
 header{
+    height: 20vh;
     nav{
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-        .menu{
-            align-self: center;
-            width: 30%;
-            height: 40%;
-        }
-        .logo{
-            display: flex;
-            justify-self: center;
-            padding-top: 30px;
-            align-self: center;
-            width: 60%;
-            
-        }
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+    .logo{
+        justify-self: center;
+    }
+    .menubar{
+        padding: 0 15px ;
     }
 }
 
@@ -37,39 +34,33 @@ main{
     height: 65vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    .content{
+    .about{
+        height: 60%;
+        width: 85%;
+        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
-        width: 80%;
-        height: 60%;
+        justify-content: center;
+        gap: 10px;
         p{
-            text-align: center;
-            font-size: 15;
+            font-size: 15px;
             font-style: italic;
             font-family: "Albert Sans", sans-serif;
-            font-weight: 200;
-            margin-top: 8px;
-        }
+            font-weight: 300;
+            margin: 0;
+            }
         h3{
-            font-family: "Albert Sans", sans-serif;
-            font-size: 24px;
-            font-weight: 600;
+            font-family:"Albert Sans", sans-serif ;
+            font-size: 20px;
             font-style: italic;
-            margin-bottom:  0;
-
+            font-weight: 500;
         }
     }
-}
-    .signbtn{
-        display: flex;
-        height: 20%;
-        align-items: flex-end;
+    .btn{
+        margin-bottom: 60px;
         button{
             width: 150px;
             height: 48px;
@@ -79,10 +70,55 @@ main{
             font-size: 20px;
             font-family: "Albert Sans", sans-serif; 
         }
+    }
 }
+
 footer{
     height: 15vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
+@media screen and (min-width: 700px) {
+    .hide{
+        display: inline-block;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        height: 100%;
+        
+        .navbar {
+            display: flex;
+            /* border: solid red 2px; */
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+            ul {
+            list-style: none; 
+            display: flex;
+            gap: 100px;
+            li{
+                a{
+                    text-decoration: none;
+                    font-family: "Albert Sans", sans-serif;
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: black;
+                }
+            }
+        }
+    
+        }
+    }
+    .menubar {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+

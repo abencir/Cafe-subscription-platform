@@ -1,5 +1,4 @@
 
-
 body{
     margin: 0;
     padding: 0;
@@ -8,35 +7,41 @@ body{
     overflow-y: visible;
 
 }
+.hide{
+    display: none;
+}
 header{
+    height: 20vh;
     nav{
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-        .menu{
-            align-self: center;
-            width: 30%;
-            height: 40%;
-        }
-        .logo{
-            display: flex;
-            justify-self: center;
-            padding-top: 30px;
-            align-self: center;
-            width: 60%;
-            
-        }
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }  
+    .logo{
+        justify-self: center;
+    }
+    .menubar{
+        padding: 0 15px ;
     }
 }
 
 main{
-    z-index: 99;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    height: 70vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 80px 20px 0 20px;
+    padding-top: 20px;
+    
+    /* border: solid black 2px; */
+
     .card{
         border: solid 2px black;
-        width: 87.5%;
+        width: 344px;
         height: 331px;
         background-color: #362323eb ;
         display: flex;
@@ -80,16 +85,67 @@ main{
                 }
             }
         }
-    }
+}
+
 
 footer {
     .bgfooter {
         position: fixed;
-        z-index: 99;
         bottom: 0;
-        width: 400px;
-        height: 19vh;
+        width: 100%;
+        height: 8vh;
         background-color: #306844;
-        clip-path: path('M 0 100 Q 500 160, 500 0 L 600 600 L 0 200 Z');
+        border-radius: 30px 30px 0px 0px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 700px) {
+    .hide{
+        display: inline-block;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        height: 100%;
+        
+        .navbar {
+            display: flex;
+            /* border: solid red 2px; */
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+            ul {
+            list-style: none; 
+            display: flex;
+            gap: 100px;
+            li{
+                a{
+                    text-decoration: none;
+                    font-family: "Albert Sans", sans-serif;
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: black;
+                }
+            }
+        }
+    
+        }
+    }
+    .menubar {
+        display: none;
     }
 }

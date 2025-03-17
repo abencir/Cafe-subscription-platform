@@ -108,13 +108,6 @@ footer {
 
 
 
-
-
-
-
-
-
-
 @media screen and (min-width: 700px) {
     .hide{
         display: inline-block;
@@ -149,3 +142,7 @@ footer {
         display: none;
     }
 }
+
+    .card{
+        background: black;
+    }
